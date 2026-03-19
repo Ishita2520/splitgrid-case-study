@@ -212,7 +212,7 @@ body {
    ===================== */
 .insight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   margin: 2.5rem 0;
 }
@@ -343,6 +343,33 @@ body {
 }
 
 /* =====================
+   SCROLL HINT
+   ===================== */
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.25rem;
+  padding-left: 2px;
+}
+
+.scroll-hint-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #22c55e;
+  letter-spacing: 0.04em;
+}
+
+.scroll-hint svg {
+  animation: nudge 1.6s ease-in-out infinite;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+/* =====================
    PHONE FRAMES
    ===================== */
 .screen-wrap {
@@ -386,10 +413,7 @@ body {
 .dark-bar { background: #111; }
 .dark-bar span { font-size: 9px; color: rgba(255,255,255,0.7); }
 
-.phone-body {
-  min-height: 300px;
-}
-
+.phone-body { min-height: 300px; }
 .white-body { background: #ffffff; }
 
 /* Contact rows */
@@ -408,16 +432,8 @@ body {
   flex-shrink: 0;
 }
 
-.contact-name {
-  font-size: 10px;
-  font-weight: 600;
-  color: #111;
-}
-
-.contact-num {
-  font-size: 9px;
-  color: #aaa;
-}
+.contact-name { font-size: 10px; font-weight: 600; color: #111; }
+.contact-num { font-size: 9px; color: #aaa; }
 
 /* Device rows */
 .device-row {
@@ -432,25 +448,27 @@ body {
 .dcost { font-size: 9px; color: #22c55e; font-weight: 600; }
 
 .dot-g, .dot-y, .dot-r {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
+  width: 7px; height: 7px;
+  border-radius: 50%; flex-shrink: 0;
 }
 .dot-g { background: #22c55e; }
 .dot-y { background: #f59e0b; }
 .dot-r { background: #ef4444; }
 
 /* =====================
-   DECISION GRID
+   TWO-COL GRID
+   (Key Decisions + Reflection)
    ===================== */
-.decision-grid {
+.two-col-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin: 2rem 0;
 }
 
+/* =====================
+   DECISION CARDS
+   ===================== */
 .decision-card {
   background: #fafafa;
   border: 1px solid #e5e7eb;
@@ -461,6 +479,14 @@ body {
 
 .decision-card.highlight { border-color: #bbf7d0; }
 .decision-card.highlight:hover { border-color: #22c55e; }
+
+.decision-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 100%;
+}
 
 .d-label {
   font-size: 11px;
@@ -473,15 +499,8 @@ body {
 .green-label { color: #16a34a; }
 
 /* =====================
-   REFLECTION GRID
+   REFLECTION CARDS
    ===================== */
-.reflection-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin: 2.5rem 0;
-}
-
 .refl-card {
   background: #fafafa;
   border: 1px solid #e5e7eb;
@@ -527,11 +546,7 @@ body {
   color: #111;
 }
 
-.footer-cta p {
-  font-size: 14px;
-  color: #888;
-  margin: 0;
-}
+.footer-cta p { font-size: 14px; color: #888; margin: 0; }
 
 .cta-btn {
   display: inline-flex;
@@ -548,10 +563,7 @@ body {
   transition: opacity 0.2s, transform 0.2s;
 }
 
-.cta-btn:hover {
-  opacity: 0.88;
-  transform: translateY(-2px);
-}
+.cta-btn:hover { opacity: 0.88; transform: translateY(-2px); }
 
 /* =====================
    RESPONSIVE
@@ -562,4 +574,5 @@ body {
   .section { padding: 3.5rem 1.25rem; }
   .screen-section-inner { padding: 0 1.25rem; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
+  .two-col-grid { grid-template-columns: 1fr; }
 }

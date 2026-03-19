@@ -11,7 +11,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-tag"><span class="dot"></span> UX Case Study · FinTech · Smart Home</div>
-    <h1>Why should you pay for your <em>roommate's</em> Tesla?</h1>
+    <h1>Your flatmate's Tesla <em>shouldn't</em> cost you $50 a month.</h1>
     <p class="hero-sub">SplitGrid is a bill-splitting app for flatmates that charges each person based on their actual energy usage — not a flat equal split. I designed the full experience from onboarding to settlement.</p>
     <div class="hero-meta">
       <div class="meta-item"><label>My role</label><span>UX Designer</span></div>
@@ -39,22 +39,10 @@
     <p>SplitGrid solves this by connecting to smart home devices, tracking actual energy usage per person, and calculating each flatmate's real share of the bill. The result is a fairer system — and far fewer awkward conversations.</p>
 
     <div class="stats-grid">
-      <div class="stat-card">
-        <div class="num green">Fair</div>
-        <div class="desc">billing based on actual usage, not equal splits</div>
-      </div>
-      <div class="stat-card">
-        <div class="num green">Real-time</div>
-        <div class="desc">device tracking per room and per person</div>
-      </div>
-      <div class="stat-card">
-        <div class="num green">One-tap</div>
-        <div class="desc">bill settlement with built-in payment transfer</div>
-      </div>
-      <div class="stat-card">
-        <div class="num green">Smart</div>
-        <div class="desc">QR-based device onboarding via Matter protocol</div>
-      </div>
+      <div class="stat-card"><div class="num green">Fair</div><div class="desc">billing based on actual usage, not equal splits</div></div>
+      <div class="stat-card"><div class="num green">Real-time</div><div class="desc">device tracking per room and per person</div></div>
+      <div class="stat-card"><div class="num green">One-tap</div><div class="desc">bill settlement with built-in payment transfer</div></div>
+      <div class="stat-card"><div class="num green">Smart</div><div class="desc">QR-based device onboarding via Matter protocol</div></div>
     </div>
 
     <div class="callout">
@@ -90,9 +78,69 @@
 
   <hr class="divider" />
 
+  <!-- RESEARCH -->
+  <section class="section fade-in" id="research">
+    <div class="section-label">03 · Research & Insights</div>
+    <h2>The problem was emotional, not just financial.</h2>
+    <p>Before jumping into design, I explored the shared living landscape to understand what actually causes friction between flatmates around bills. The findings reframed the problem entirely — this wasn't a maths problem, it was a trust and transparency problem.</p>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="icon-box">😤</div>
+        <h4>Resentment builds silently</h4>
+        <p>Flatmates rarely confront each other about unfair usage. Instead, frustration accumulates over months — equal splits feel deeply unfair when one person owns an EV or runs high-power appliances.</p>
+      </div>
+      <div class="insight-card">
+        <div class="icon-box">🔍</div>
+        <h4>Visibility changes behaviour</h4>
+        <p>When people can see exactly how much their devices cost in real time, they naturally reduce unnecessary usage. Transparency is both a fairness tool and an energy-saving one.</p>
+      </div>
+      <div class="insight-card">
+        <div class="icon-box">🤝</div>
+        <h4>Trust requires proof</h4>
+        <p>Flatmates won't accept a new billing system unless they can verify the numbers themselves. Any design that hides the calculation logic will be rejected — even if the result is correct.</p>
+      </div>
+      <div class="insight-card">
+        <div class="icon-box">📱</div>
+        <h4>Setup friction kills adoption</h4>
+        <p>Existing smart home apps require complex manual device configuration. For SplitGrid to work, adding a device had to feel as easy as scanning a QR code — because it does.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>"Fair billing only works if every flatmate trusts the system. That meant designing for transparency at every step — not just accuracy."</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">↗</div>
+        <div class="step-content">
+          <h4>Design implication: show the maths</h4>
+          <p>Every screen that involves money needs to show how the number was calculated. This led to the per-device watt/cost breakdowns in the All Devices screen and the room-by-room distribution on the dashboard.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">↗</div>
+        <div class="step-content">
+          <h4>Design implication: make ownership visual</h4>
+          <p>The radial device map came directly from the insight that ownership needs to feel personal. A list of device names doesn't create a sense of "these are my devices and this is my footprint" — a spatial, person-centred view does.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">↗</div>
+        <div class="step-content">
+          <h4>Design implication: reduce setup to seconds</h4>
+          <p>Supporting Matter protocol QR onboarding was a direct response to the finding that setup friction kills adoption. If connecting a device takes more than 30 seconds, users give up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
   <!-- DESIGN FLOW -->
   <section class="section fade-in" id="design">
-    <div class="section-label">03 · Design Decisions</div>
+    <div class="section-label">04 · Design Process</div>
     <h2>Every screen had a job to do.</h2>
     <p>The app needed to guide users through a journey that starts with zero data — no devices connected, no flatmates added — and ends with a fully automated, fair billing system. Each screen was designed to make that journey feel effortless.</p>
 
@@ -115,7 +163,7 @@
         <div class="step-num">3</div>
         <div class="step-content">
           <h4>Import Contacts — social proof at the right moment</h4>
-          <p>Showing that existing contacts already use SplitGrid ("These people have invited you") creates immediate trust and lowers the friction of inviting flatmates to join.</p>
+          <p>Showing that existing contacts already use SplitGrid creates immediate trust and lowers the friction of inviting flatmates to join.</p>
         </div>
       </div>
       <div class="step">
@@ -129,14 +177,14 @@
         <div class="step-num">5</div>
         <div class="step-content">
           <h4>Your Devices — a radial map for ownership clarity</h4>
-          <p>Instead of a flat list, devices are shown in a radial orbit around the user's profile. This makes the concept of "your" energy footprint feel personal and spatial — immediately communicating who owns what.</p>
+          <p>Instead of a flat list, devices are shown in a radial orbit around the user's profile. This makes the concept of "your" energy footprint feel personal and spatial.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">6</div>
         <div class="step-content">
           <h4>All Devices — transparency across flatmates</h4>
-          <p>Each flatmate's device list is expandable with watt/cost breakdowns and colour-coded usage indicators. This screen is the key to making fair billing feel trustworthy — everyone can see the numbers.</p>
+          <p>Each flatmate's device list is expandable with watt/cost breakdowns and colour-coded usage indicators. This screen is the key to making fair billing feel trustworthy.</p>
         </div>
       </div>
       <div class="step">
@@ -154,10 +202,9 @@
     <div class="screen-section-inner">
       <div class="section-label">My Figma screens</div>
       <div class="screen-title">The full user journey — from splash to settlement.</div>
-      <div class="screen-desc">11 screens covering onboarding, device setup, dashboard, usage tracking, and bill settlement. Scroll right to see all screens.</div>
+      <div class="screen-desc">11 screens covering onboarding, device setup, dashboard, usage tracking, and bill settlement.</div>
 
       <div class="screens-row">
-
         <!-- Splash -->
         <div class="screen-wrap">
           <div class="screen-label-sm">Splash</div>
@@ -242,7 +289,7 @@
               <div style="background:#f3f4f6;border-radius:10px;padding:10px 12px;margin-bottom:8px;">
                 <div style="font-size:10px;color:#aaa;margin-bottom:8px;">Search your Building</div>
                 <div style="display:flex;gap:6px;">
-                  <div style="flex:1;background:#f3f4f6;border-radius:6px;padding:6px;font-size:9px;color:#aaa;">Apartment Number</div>
+                  <div style="flex:1;background:#fff;border-radius:6px;padding:6px;font-size:9px;color:#aaa;">Apartment Number</div>
                   <div style="background:#22c55e;border-radius:6px;padding:6px 10px;font-size:9px;color:#fff;font-weight:600;">Search</div>
                 </div>
               </div>
@@ -402,32 +449,41 @@
             </div>
           </div>
         </div>
-
       </div>
+
+      <!-- SCROLL HINT -->
+      <div class="scroll-hint">
+        <span class="scroll-hint-text">scroll to see all screens</span>
+        <svg width="32" height="16" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="8" x2="26" y2="8" stroke="#22c55e" stroke-width="1.5"/>
+          <polyline points="20,2 28,8 20,14" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
     </div>
   </section>
 
   <!-- KEY DESIGN DECISIONS -->
   <section class="section fade-in" id="decisions">
-    <div class="section-label">04 · Key Design Decisions</div>
+    <div class="section-label">05 · Key Design Decisions</div>
     <h2>The choices that defined the experience.</h2>
 
-    <div class="decision-grid">
+    <div class="two-col-grid">
       <div class="decision-card highlight">
         <div class="d-label green-label">Radial device map</div>
-        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">Instead of a flat list, devices orbit the user's profile in a radar-style layout. This makes energy ownership feel personal and spatial — immediately answering "which devices are mine?"</p>
+        <p>Instead of a flat list, devices orbit the user's profile in a radar-style layout. This makes energy ownership feel personal and spatial — immediately answering "which devices are mine?"</p>
       </div>
       <div class="decision-card highlight">
         <div class="d-label green-label">QR onboarding via Matter</div>
-        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">Supporting the Matter smart home protocol means users can scan a QR code to instantly add any compatible device. This reduces setup friction to seconds rather than minutes.</p>
+        <p>Supporting the Matter smart home protocol means users can scan a QR code to instantly add any compatible device. This reduces setup friction to seconds rather than minutes.</p>
       </div>
       <div class="decision-card highlight">
         <div class="d-label green-label">Energy score on dashboard</div>
-        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">A single "Energy Score" number on the home screen gives users an immediate sense of their usage without needing to read charts — designed for the 3-second glance.</p>
+        <p>A single "Energy Score" number on the home screen gives users an immediate sense of their usage without needing to read charts — designed for the 3-second glance.</p>
       </div>
       <div class="decision-card highlight">
         <div class="d-label green-label">Colour-coded usage indicators</div>
-        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">Green, yellow, and red dots on each device in the All Devices screen let users instantly identify high-consumption appliances without reading any numbers.</p>
+        <p>Green, yellow, and red dots on each device in the All Devices screen let users instantly identify high-consumption appliances without reading any numbers.</p>
       </div>
     </div>
   </section>
@@ -436,12 +492,12 @@
 
   <!-- REFLECTION -->
   <section class="section fade-in" id="outcomes">
-    <div class="section-label">05 · Reflection</div>
+    <div class="section-label">06 · Reflection</div>
     <h2>What this project taught me about designing for fairness.</h2>
     <p>SplitGrid sits at an interesting intersection: financial transparency, smart home technology, and interpersonal relationships. Designing for all three at once meant that every decision had social consequences — not just usability ones.</p>
-    <p>The most important insight was that fairness needs to be visible, not just accurate. It's not enough that the system calculates the right numbers — users need to be able to see exactly how those numbers were reached. The All Devices screen, the room-by-room breakdown, and the transaction history all exist to serve that transparency.</p>
+    <p>The most important insight was that fairness needs to be visible, not just accurate. It's not enough that the system calculates the right numbers — users need to be able to see exactly how those numbers were reached.</p>
 
-    <div class="reflection-grid">
+    <div class="two-col-grid">
       <div class="refl-card">
         <h4>Transparency = trust</h4>
         <p>Every design decision around data visibility was motivated by the same goal: if a flatmate questions a bill, the answer should be one tap away.</p>
