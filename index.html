@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SplitGrid — Ishita UX Case Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag"><span class="dot"></span> UX Case Study · FinTech · Smart Home</div>
+    <h1>Why should you pay for your <em>roommate's</em> Tesla?</h1>
+    <p class="hero-sub">SplitGrid is a bill-splitting app for flatmates that charges each person based on their actual energy usage — not a flat equal split. I designed the full experience from onboarding to settlement.</p>
+    <div class="hero-meta">
+      <div class="meta-item"><label>My role</label><span>UX Designer</span></div>
+      <div class="meta-item"><label>Platform</label><span>iOS Mobile App</span></div>
+      <div class="meta-item"><label>Tools</label><span>Figma</span></div>
+      <div class="meta-item"><label>Type</label><span>Product Design Project</span></div>
+    </div>
+    <div class="tags-row">
+      <span class="tag">UX Design</span>
+      <span class="tag">Interaction Design</span>
+      <span class="tag">Onboarding</span>
+      <span class="tag">Data Visualization</span>
+      <span class="tag">FinTech</span>
+      <span class="tag">IoT / Smart Home</span>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- OVERVIEW -->
+  <section class="section fade-in" id="overview">
+    <div class="section-label">01 · Overview</div>
+    <h2>Equal splits aren't fair splits.</h2>
+    <p>Anyone who has lived with roommates knows the feeling. You go to bed at 10pm, use one lamp, and charge a single phone. Your flatmate runs a gaming PC, charges an electric car overnight, and leaves every light on. At the end of the month, you split the bill equally and silently resent each other.</p>
+    <p>SplitGrid solves this by connecting to smart home devices, tracking actual energy usage per person, and calculating each flatmate's real share of the bill. The result is a fairer system — and far fewer awkward conversations.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="num green">Fair</div>
+        <div class="desc">billing based on actual usage, not equal splits</div>
+      </div>
+      <div class="stat-card">
+        <div class="num green">Real-time</div>
+        <div class="desc">device tracking per room and per person</div>
+      </div>
+      <div class="stat-card">
+        <div class="num green">One-tap</div>
+        <div class="desc">bill settlement with built-in payment transfer</div>
+      </div>
+      <div class="stat-card">
+        <div class="num green">Smart</div>
+        <div class="desc">QR-based device onboarding via Matter protocol</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>"The core design challenge wasn't the data — it was making complex energy tracking feel simple, transparent, and fair to people who just want to pay their bills and move on."</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PROBLEM -->
+  <section class="section fade-in" id="problem">
+    <div class="section-label">02 · The Problem</div>
+    <h2>Three real problems flatmates face every month.</h2>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="icon-box">⚡</div>
+        <h4>Unfair equal splits</h4>
+        <p>When bills are split equally regardless of usage, heavy users are subsidised by light users. This creates resentment and conflict in shared living spaces.</p>
+      </div>
+      <div class="insight-card">
+        <div class="icon-box">📊</div>
+        <h4>No visibility into usage</h4>
+        <p>Flatmates have no way of knowing how much energy each person or device is actually consuming — making fair conversations impossible.</p>
+      </div>
+      <div class="insight-card">
+        <div class="icon-box">💸</div>
+        <h4>Painful bill settlement</h4>
+        <p>Chasing flatmates for money, remembering who owes what, and managing multiple transfers every month is time-consuming and awkward.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- DESIGN FLOW -->
+  <section class="section fade-in" id="design">
+    <div class="section-label">03 · Design Decisions</div>
+    <h2>Every screen had a job to do.</h2>
+    <p>The app needed to guide users through a journey that starts with zero data — no devices connected, no flatmates added — and ends with a fully automated, fair billing system. Each screen was designed to make that journey feel effortless.</p>
+
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Onboarding — setting expectations before asking for anything</h4>
+          <p>The 3-screen onboarding uses clear value props ("Pay for what you use", "Control your appliances") before asking users to set up anything. This reduces drop-off by making the payoff clear upfront.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Device setup — two paths for different users</h4>
+          <p>The Setup screen offers both a smart building search and a manual device entry option. QR scanning via the camera makes adding smart devices (Matter protocol) feel instant and modern.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Import Contacts — social proof at the right moment</h4>
+          <p>Showing that existing contacts already use SplitGrid ("These people have invited you") creates immediate trust and lowers the friction of inviting flatmates to join.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Dashboard — the most complex screen, simplified</h4>
+          <p>The home screen surfaces energy score, energy distribution by room, shared expenses, flatmate payment status, and a payment record chart — all in a single scroll. Grouping related information into cards prevents cognitive overload.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Your Devices — a radial map for ownership clarity</h4>
+          <p>Instead of a flat list, devices are shown in a radial orbit around the user's profile. This makes the concept of "your" energy footprint feel personal and spatial — immediately communicating who owns what.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>All Devices — transparency across flatmates</h4>
+          <p>Each flatmate's device list is expandable with watt/cost breakdowns and colour-coded usage indicators. This screen is the key to making fair billing feel trustworthy — everyone can see the numbers.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">7</div>
+        <div class="step-content">
+          <h4>Settle your bills — closing the loop</h4>
+          <p>A donut chart showing the $280 total split across flatmates, combined with a one-tap transfer row and transaction history, makes the final step feel simple and final.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENS SHOWCASE -->
+  <section class="screen-section">
+    <div class="screen-section-inner">
+      <div class="section-label">My Figma screens</div>
+      <div class="screen-title">The full user journey — from splash to settlement.</div>
+      <div class="screen-desc">11 screens covering onboarding, device setup, dashboard, usage tracking, and bill settlement. Scroll right to see all screens.</div>
+
+      <div class="screens-row">
+
+        <!-- Splash -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Splash</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:40px 20px 24px;">
+              <div></div>
+              <div style="text-align:center;">
+                <span style="font-size:22px;font-weight:800;color:#22c55e;">Split</span><span style="font-size:22px;font-weight:800;color:#111;">Grid</span>
+              </div>
+              <div style="border:1.5px solid #222;border-radius:99px;padding:8px 20px;font-size:11px;font-weight:500;color:#111;">Get Started →</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Onboarding 1 -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Onboarding 1</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:20px 16px 20px;">
+              <div style="display:flex;gap:5px;margin-bottom:10px;">
+                <div style="width:20px;height:4px;border-radius:2px;background:#22c55e;"></div>
+                <div style="width:12px;height:4px;border-radius:2px;background:#d1fae5;"></div>
+                <div style="width:12px;height:4px;border-radius:2px;background:#d1fae5;"></div>
+              </div>
+              <div style="font-size:28px;text-align:center;">💰</div>
+              <div style="text-align:center;">
+                <div style="font-size:10px;color:#22c55e;font-weight:600;margin-bottom:4px;">Split Energy Bills</div>
+                <div style="font-size:13px;font-weight:700;color:#111;">Pay for what you use</div>
+              </div>
+              <div style="border:1.5px solid #222;border-radius:99px;padding:7px 18px;font-size:10px;font-weight:500;color:#111;">Next</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Onboarding 2 -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Onboarding 2</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:20px 16px 20px;">
+              <div style="display:flex;gap:5px;">
+                <div style="width:12px;height:4px;border-radius:2px;background:#22c55e;"></div>
+                <div style="width:20px;height:4px;border-radius:2px;background:#22c55e;"></div>
+                <div style="width:12px;height:4px;border-radius:2px;background:#d1fae5;"></div>
+              </div>
+              <div style="font-size:28px;text-align:center;">🦸‍♀️</div>
+              <div style="text-align:center;">
+                <div style="font-size:10px;color:#22c55e;font-weight:600;margin-bottom:4px;">You are the boss</div>
+                <div style="font-size:13px;font-weight:700;color:#111;">Control your Appliances</div>
+              </div>
+              <div style="border:1.5px solid #222;border-radius:99px;padding:7px 18px;font-size:10px;font-weight:500;color:#111;">Next</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import Contacts -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Import Contacts</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="padding:14px 12px;">
+              <div style="font-size:14px;font-weight:800;color:#111;margin-bottom:4px;">Import Contacts</div>
+              <div style="font-size:9px;color:#888;margin-bottom:12px;">These people use SplitGrid and have invited you</div>
+              <div class="contact-row"><div class="contact-avatar" style="background:#f97316;"></div><div><div class="contact-name">Sam</div><div class="contact-num">+1 495939493</div></div></div>
+              <div class="contact-row"><div class="contact-avatar" style="background:#3b82f6;"></div><div><div class="contact-name">Ryan</div><div class="contact-num">+1 5838574383</div></div></div>
+              <div class="contact-row"><div class="contact-avatar" style="background:#8b5cf6;"></div><div><div class="contact-name">Sean</div><div class="contact-num">+1 4839756483</div></div></div>
+              <div style="font-size:9px;color:#888;text-align:center;margin-top:8px;">Load more 52 contacts</div>
+              <div style="margin-top:10px;background:#111;border-radius:99px;padding:7px;text-align:center;font-size:10px;color:#fff;font-weight:600;">Allow Contacts</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Setup -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Setup</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="padding:14px 12px;">
+              <div style="font-size:16px;font-weight:800;color:#111;margin-bottom:12px;">Setup</div>
+              <div style="background:#f3f4f6;border-radius:10px;padding:10px 12px;margin-bottom:8px;">
+                <div style="font-size:10px;color:#aaa;margin-bottom:8px;">Search your Building</div>
+                <div style="display:flex;gap:6px;">
+                  <div style="flex:1;background:#f3f4f6;border-radius:6px;padding:6px;font-size:9px;color:#aaa;">Apartment Number</div>
+                  <div style="background:#22c55e;border-radius:6px;padding:6px 10px;font-size:9px;color:#fff;font-weight:600;">Search</div>
+                </div>
+              </div>
+              <div style="text-align:center;font-size:9px;color:#888;margin:6px 0;">Or</div>
+              <div style="background:#f3f4f6;border-radius:10px;padding:10px 12px;font-size:9px;color:#888;text-align:center;">Add your devices manually</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR Scan -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">QR Scan</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body" style="background:#888;padding:0;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="padding:10px;display:flex;justify-content:space-between;">
+                <div style="width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;font-size:10px;">⚡</div>
+                <div style="width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;font-size:10px;">◎</div>
+              </div>
+              <div style="background:rgba(0,0,0,0.4);margin:0 16px;border-radius:8px;padding:20px;text-align:center;">
+                <div style="border:2px solid #fff;border-radius:4px;width:50px;height:50px;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:18px;">⬛</div>
+                <div style="font-size:8px;color:#fff;">matter QR code</div>
+              </div>
+              <div style="background:#111;padding:10px;display:flex;justify-content:space-around;align-items:center;">
+                <div style="width:28px;height:28px;border-radius:50%;background:#333;"></div>
+                <div style="width:36px;height:36px;border-radius:50%;border:3px solid #fff;"></div>
+                <div style="width:28px;height:28px;border-radius:50%;background:#333;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Dashboard</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="padding:10px 10px;">
+              <div style="font-size:10px;color:#888;">Good Evening</div>
+              <div style="font-size:14px;font-weight:800;color:#111;margin-bottom:8px;">Samuel</div>
+              <div style="background:#f3f4f6;border-radius:10px;padding:8px;">
+                <div style="display:flex;gap:6px;margin-bottom:6px;">
+                  <div style="background:#22c55e;border-radius:6px;padding:8px 6px;flex:1;text-align:center;">
+                    <div style="font-size:8px;color:#fff;">Energy Score</div>
+                    <div style="font-size:18px;font-weight:800;color:#fff;">4</div>
+                  </div>
+                  <div style="background:#fff;border-radius:6px;padding:6px;flex:1.5;">
+                    <div style="font-size:8px;color:#111;font-weight:600;margin-bottom:4px;">Energy Distribution</div>
+                    <div style="display:flex;gap:3px;flex-wrap:wrap;">
+                      <span style="font-size:7px;color:#888;">30% Bed1</span>
+                      <span style="font-size:7px;color:#888;">35% Living</span>
+                      <span style="font-size:7px;color:#888;">20% Kitchen</span>
+                      <span style="font-size:7px;color:#888;">15% Bed2</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:6px;">
+                  <div style="background:#1e3a5f;border-radius:6px;padding:6px 8px;flex:1;font-size:9px;color:#fff;font-weight:600;">Add Person</div>
+                  <div style="background:#fff;border-radius:6px;padding:6px;flex:1.5;">
+                    <div style="font-size:7px;color:#111;font-weight:600;">Shared Expenses</div>
+                    <div style="display:flex;gap:4px;margin-top:4px;">
+                      <div style="background:#f0fdf4;border-radius:4px;padding:3px 4px;text-align:center;"><div style="font-size:8px;">⚡</div><div style="font-size:7px;color:#22c55e;">$12</div></div>
+                      <div style="background:#f0fdf4;border-radius:4px;padding:3px 4px;text-align:center;"><div style="font-size:8px;">📶</div><div style="font-size:7px;color:#22c55e;">$30</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top:8px;font-size:10px;font-weight:700;color:#111;">Payment Record</div>
+              <div style="background:#f0fdf4;border-radius:6px;height:40px;margin-top:4px;display:flex;align-items:flex-end;justify-content:space-around;padding:4px 6px;">
+                <div style="width:8px;background:#22c55e;border-radius:2px;height:60%;opacity:0.6;"></div>
+                <div style="width:8px;background:#22c55e;border-radius:2px;height:100%;"></div>
+                <div style="width:8px;background:#22c55e;border-radius:2px;height:70%;opacity:0.7;"></div>
+                <div style="width:8px;background:#22c55e;border-radius:2px;height:80%;opacity:0.8;"></div>
+                <div style="width:8px;background:#22c55e;border-radius:2px;height:90%;"></div>
+                <div style="width:8px;background:#22c55e;border-radius:2px;height:75%;opacity:0.7;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Your Devices -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Your Devices</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="padding:14px 12px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="font-size:15px;font-weight:800;color:#111;">Your Devices</div>
+              <div style="position:relative;width:160px;height:160px;margin:0 auto;">
+                <div style="position:absolute;inset:0;border-radius:50%;background:rgba(34,197,94,0.08);"></div>
+                <div style="position:absolute;inset:20px;border-radius:50%;background:rgba(34,197,94,0.15);"></div>
+                <div style="position:absolute;inset:40px;border-radius:50%;background:rgba(34,197,94,0.25);"></div>
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:#ddd;"></div>
+                <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);font-size:14px;">🛴</div>
+                <div style="position:absolute;bottom:10px;left:20px;font-size:14px;">🎸</div>
+                <div style="position:absolute;bottom:20px;right:10px;font-size:14px;">🖥</div>
+                <div style="position:absolute;top:30px;right:10px;font-size:14px;">🏎</div>
+                <div style="position:absolute;top:40px;left:10px;font-size:14px;">🎮</div>
+              </div>
+              <div style="border:1.5px solid #111;border-radius:99px;padding:8px;text-align:center;font-size:10px;font-weight:500;color:#111;">Check Other Users</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- All Devices -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">All Devices</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="padding:12px 10px;">
+              <div style="font-size:14px;font-weight:800;color:#111;margin-bottom:8px;">All Devices</div>
+              <div style="background:#f3f4f6;border-radius:10px;padding:8px;margin-bottom:6px;">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                  <div style="width:22px;height:22px;border-radius:50%;background:#f97316;"></div>
+                  <div><div style="font-size:10px;font-weight:700;color:#111;">Sam</div><div style="font-size:8px;color:#22c55e;">1650W / $70</div></div>
+                </div>
+                <div class="device-row"><span class="dname">4 Sockets</span><span class="dcost">17W / $8</span><span class="dot-g"></span></div>
+                <div class="device-row"><span class="dname">Windows PC</span><span class="dcost">300W / $12</span><span class="dot-y"></span></div>
+                <div class="device-row"><span class="dname">Mercedes EQS</span><span class="dcost">1000W / $50</span><span class="dot-r"></span></div>
+              </div>
+              <div style="background:#f3f4f6;border-radius:10px;padding:8px;display:flex;align-items:center;gap:6px;">
+                <div style="width:22px;height:22px;border-radius:50%;background:#3b82f6;"></div>
+                <div><div style="font-size:10px;font-weight:700;color:#111;">Ryan</div><div style="font-size:8px;color:#888;">7 devices</div></div>
+              </div>
+              <div style="border:1.5px solid #111;border-radius:99px;padding:7px;text-align:center;font-size:9px;font-weight:500;color:#111;margin-top:8px;">Check Live Bill</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settle Bills -->
+        <div class="screen-wrap">
+          <div class="screen-label-sm">Settle Bills</div>
+          <div class="phone-outer white">
+            <div class="phone-bar dark-bar"><span>9:41</span><span>▲▲</span></div>
+            <div class="phone-body white-body" style="padding:12px 10px;">
+              <div style="font-size:14px;font-weight:800;color:#111;margin-bottom:4px;">Settle your bills</div>
+              <div style="font-size:9px;color:#888;margin-bottom:8px;">Breakdown</div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                <div style="width:70px;height:70px;border-radius:50%;border:10px solid #22c55e;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <span style="font-size:9px;font-weight:800;color:#111;">$280</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:3px;">
+                  <div style="display:flex;align-items:center;gap:4px;"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e;"></div><span style="font-size:8px;">Me</span></div>
+                  <div style="display:flex;align-items:center;gap:4px;"><div style="width:7px;height:7px;border-radius:50%;background:#aaa;"></div><span style="font-size:8px;">Sean</span></div>
+                  <div style="display:flex;align-items:center;gap:4px;"><div style="width:7px;height:7px;border-radius:50%;background:#86efac;"></div><span style="font-size:8px;">Ryan</span></div>
+                  <div style="display:flex;align-items:center;gap:4px;"><div style="width:7px;height:7px;border-radius:50%;background:#a5f3fc;"></div><span style="font-size:8px;">Sam</span></div>
+                </div>
+              </div>
+              <div style="font-size:9px;font-weight:700;color:#111;margin-bottom:5px;">Transactions</div>
+              <div style="background:#f0fdf4;border-radius:8px;padding:6px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;">
+                <div><div style="font-size:9px;font-weight:600;color:#111;">Ryan has paid</div><div style="font-size:8px;color:#888;">Today 08:23 PM</div></div>
+                <div style="font-size:9px;font-weight:700;color:#ef4444;">-$326</div>
+              </div>
+              <div style="background:#f0fdf4;border-radius:8px;padding:6px;display:flex;justify-content:space-between;align-items:center;">
+                <div><div style="font-size:9px;font-weight:600;color:#111;">Sean has paid</div><div style="font-size:8px;color:#888;">Today 10:43 PM</div></div>
+                <div style="font-size:9px;font-weight:700;color:#ef4444;">-$116</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY DESIGN DECISIONS -->
+  <section class="section fade-in" id="decisions">
+    <div class="section-label">04 · Key Design Decisions</div>
+    <h2>The choices that defined the experience.</h2>
+
+    <div class="decision-grid">
+      <div class="decision-card highlight">
+        <div class="d-label green-label">Radial device map</div>
+        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">Instead of a flat list, devices orbit the user's profile in a radar-style layout. This makes energy ownership feel personal and spatial — immediately answering "which devices are mine?"</p>
+      </div>
+      <div class="decision-card highlight">
+        <div class="d-label green-label">QR onboarding via Matter</div>
+        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">Supporting the Matter smart home protocol means users can scan a QR code to instantly add any compatible device. This reduces setup friction to seconds rather than minutes.</p>
+      </div>
+      <div class="decision-card highlight">
+        <div class="d-label green-label">Energy score on dashboard</div>
+        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">A single "Energy Score" number on the home screen gives users an immediate sense of their usage without needing to read charts — designed for the 3-second glance.</p>
+      </div>
+      <div class="decision-card highlight">
+        <div class="d-label green-label">Colour-coded usage indicators</div>
+        <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.7;margin:0;">Green, yellow, and red dots on each device in the All Devices screen let users instantly identify high-consumption appliances without reading any numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- REFLECTION -->
+  <section class="section fade-in" id="outcomes">
+    <div class="section-label">05 · Reflection</div>
+    <h2>What this project taught me about designing for fairness.</h2>
+    <p>SplitGrid sits at an interesting intersection: financial transparency, smart home technology, and interpersonal relationships. Designing for all three at once meant that every decision had social consequences — not just usability ones.</p>
+    <p>The most important insight was that fairness needs to be visible, not just accurate. It's not enough that the system calculates the right numbers — users need to be able to see exactly how those numbers were reached. The All Devices screen, the room-by-room breakdown, and the transaction history all exist to serve that transparency.</p>
+
+    <div class="reflection-grid">
+      <div class="refl-card">
+        <h4>Transparency = trust</h4>
+        <p>Every design decision around data visibility was motivated by the same goal: if a flatmate questions a bill, the answer should be one tap away.</p>
+      </div>
+      <div class="refl-card">
+        <h4>Complexity needs progressive disclosure</h4>
+        <p>The app handles complex IoT data. The design challenge was revealing that complexity only when users needed it — keeping the daily experience simple.</p>
+      </div>
+      <div class="refl-card">
+        <h4>Social UX is different</h4>
+        <p>This isn't just a utility app — it mediates relationships between people. Every screen that shows another person's data required careful thought about privacy and framing.</p>
+      </div>
+      <div class="refl-card">
+        <h4>What I'd explore next</h4>
+        <p>Notification design for payment reminders, dispute resolution flows, and an AI-driven suggestion engine for reducing energy costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <h3>Want to explore the prototype?</h3>
+    <p>Full interactive Figma prototype with all flows.</p>
+    <a href="https://www.figma.com/proto/p2kN0UYyIbFHzg4BOSLCZv/SplitGrid?page-id=0%3A1&node-id=22-2&node-type=canvas&viewport=230%2C49%2C0.04&t=1RJFOmsozBC40Cl2-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=22%3A2" target="_blank" class="cta-btn">View in Figma →</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
