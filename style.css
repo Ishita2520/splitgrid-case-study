@@ -614,3 +614,11 @@ body {
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .two-col-grid { grid-template-columns: 1fr; }
 }
+.hero-humour {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  margin-top: -0.8rem;
+  letter-spacing: -0.2px;
+}
